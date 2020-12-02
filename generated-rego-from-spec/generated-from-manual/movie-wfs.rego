@@ -19,95 +19,68 @@ user_attributes = {
 }
 
 allow {
-  user_name == "sound"
-  http_request.method == "POST"
-  current_time := time.clock([time.now_ns(), "Europe/Paris"])
-  to_number(current_time[0]) >= 17
-  http_request.path == "/api/owner"
-}
-
-allow {
-  user_name == "sound"
-  http_request.method == "POST"
-  current_time := time.clock([time.now_ns(), "Europe/Paris"])
-  to_number(current_time[0]) <= 8
-  http_request.path == "/api/owner"
-}
-
-allow {
-  http_request.method == "POST"
-  user:=user_attributes[user_name]
-  user.tenure > 10
-  user_name == "vfx-2"
-  http_request.path == "/api/color"
-}
-
-allow {
-  http_request.method == "POST"
-  current_time := time.clock([time.now_ns(), "Europe/Paris"])
-  to_number(current_time[0]) >= 8
-  user_name == "vfx-2"
-  to_number(current_time[0]) <= 17
-  http_request.path == "/api/color"
-}
-
-allow {
-  http_request.method == "POST"
-  user:=user_attributes[user_name]
-  user.tenure > 10
-  user_name == "vfx-3"
-  http_request.path == "/api/sound"
-}
-
-allow {
-  http_request.method == "POST"
-  current_time := time.clock([time.now_ns(), "Europe/Paris"])
-  to_number(current_time[0]) >= 8
-  user_name == "vfx-3"
-  to_number(current_time[0]) <= 17
-  http_request.path == "/api/sound"
-}
-
-allow {
-  http_request.method == "POST"
-  user_name == "vfx-1"
-  http_request.path == "/api/vfx-2"
-}
-
-allow {
-  http_request.method == "POST"
-  user_name == "vfx-1"
-  http_request.path == "/api/vfx-3"
-}
-
-allow {
-  user_name == "color"
-  http_request.method == "POST"
-  current_time := time.clock([time.now_ns(), "Europe/Paris"])
-  to_number(current_time[0]) >= 17
-  http_request.path == "/api/hdr"
-}
-
-allow {
-  user_name == "color"
-  http_request.method == "POST"
-  current_time := time.clock([time.now_ns(), "Europe/Paris"])
-  to_number(current_time[0]) <= 8
-  http_request.path == "/api/hdr"
-}
-
-allow {
   user_name == "owner"
   http_request.method == "POST"
-  http_request.path == "/api/vfx-1"
+  http_request.path == "/api/vfx"
+}
+
+allow {
+  http_request.method == "POST"
+  user:=user_attributes[user_name]
+  user.tenure > 10
+  user_name == "vfx"
+  http_request.path == "/api/color"
+  http_request.path == "/api/sound"
 }
 
 allow {
   http_request.method == "POST"
   current_time := time.clock([time.now_ns(), "Europe/Paris"])
-  to_number(current_time[0]) >= 8
+  to_number(current_time[0]) < 17
+  to_number(current_time[0]) > 8
+  user_name == "vfx"
+  http_request.path == "/api/color"
+  http_request.path == "/api/sound"
+}
+
+allow {
+  user_name == "color"
+  http_request.method == "POST"
+  current_time := time.clock([time.now_ns(), "Europe/Paris"])
+  to_number(current_time[0]) > 17
+  http_request.path == "/api/hdr"
+}
+
+allow {
+  user_name == "color"
+  http_request.method == "POST"
+  current_time := time.clock([time.now_ns(), "Europe/Paris"])
+  to_number(current_time[0]) < 8
+  http_request.path == "/api/hdr"
+}
+
+allow {
+  http_request.method == "POST"
+  current_time := time.clock([time.now_ns(), "Europe/Paris"])
+  to_number(current_time[0]) < 17
   user_name == "hdr"
-  to_number(current_time[0]) <= 17
+  to_number(current_time[0]) > 8
+  http_request.path == "/api/owner"
+}
+
+allow {
+  user_name == "sound"
+  http_request.method == "POST"
+  current_time := time.clock([time.now_ns(), "Europe/Paris"])
+  to_number(current_time[0]) > 17
+  http_request.path == "/api/owner"
+}
+
+allow {
+  user_name == "sound"
+  http_request.method == "POST"
+  current_time := time.clock([time.now_ns(), "Europe/Paris"])
+  to_number(current_time[0]) < 8
   http_request.path == "/api/owner"
 }
 

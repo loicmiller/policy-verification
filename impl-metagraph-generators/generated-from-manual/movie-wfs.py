@@ -193,4 +193,95 @@ def generate_metagraph():
 	policy_mg.edges.append(Edge({src}, {dst}, attributes=policy_mg.current_propositions))
 	policy_mg.current_propositions = []
 
+	rule_head = 'allow'
+	if "http_request.method==\"POST\"" not in policy_mg.propositions:
+		policy_mg.propositions.append("http_request.method==\"POST\"")
+	if "http_request.method==\"POST\"" not in policy_mg.current_propositions:
+		policy_mg.current_propositions.append("http_request.method==\"POST\"")
+	if "current_time:=time.clock([time.now_ns(),\"Europe/Paris\"])" not in policy_mg.propositions:
+		policy_mg.propositions.append("current_time:=time.clock([time.now_ns(),\"Europe/Paris\"])")
+	if "current_time:=time.clock([time.now_ns(),\"Europe/Paris\"])" not in policy_mg.current_propositions:
+		policy_mg.current_propositions.append("current_time:=time.clock([time.now_ns(),\"Europe/Paris\"])")
+	if "to_number(current_time[0])<17" not in policy_mg.propositions:
+		policy_mg.propositions.append("to_number(current_time[0])<17")
+	if "to_number(current_time[0])<17" not in policy_mg.current_propositions:
+		policy_mg.current_propositions.append("to_number(current_time[0])<17")
+	if "user_name==\"hdr\"" not in policy_mg.propositions:
+		policy_mg.propositions.append("user_name==\"hdr\"")
+	if "user_name==\"hdr\"" not in policy_mg.current_propositions:
+		policy_mg.current_propositions.append("user_name==\"hdr\"")
+	if "to_number(current_time[0])>8" not in policy_mg.propositions:
+		policy_mg.propositions.append("to_number(current_time[0])>8")
+	if "to_number(current_time[0])>8" not in policy_mg.current_propositions:
+		policy_mg.current_propositions.append("to_number(current_time[0])>8")
+	if "http_request.path==\"/api/owner\"" not in policy_mg.propositions:
+		policy_mg.propositions.append("http_request.path==\"/api/owner\"")
+	if "http_request.path==\"/api/owner\"" not in policy_mg.current_propositions:
+		policy_mg.current_propositions.append("http_request.path==\"/api/owner\"")
+	src = "rule_8"
+	policy_mg.variables.append(src)
+	dst = rule_head
+	if dst not in policy_mg.variables:
+		policy_mg.variables.append(dst)
+	policy_mg.edges.append(Edge({src}, {dst}, attributes=policy_mg.current_propositions))
+	policy_mg.current_propositions = []
+
+	rule_head = 'allow'
+	if "user_name==\"sound\"" not in policy_mg.propositions:
+		policy_mg.propositions.append("user_name==\"sound\"")
+	if "user_name==\"sound\"" not in policy_mg.current_propositions:
+		policy_mg.current_propositions.append("user_name==\"sound\"")
+	if "http_request.method==\"POST\"" not in policy_mg.propositions:
+		policy_mg.propositions.append("http_request.method==\"POST\"")
+	if "http_request.method==\"POST\"" not in policy_mg.current_propositions:
+		policy_mg.current_propositions.append("http_request.method==\"POST\"")
+	if "current_time:=time.clock([time.now_ns(),\"Europe/Paris\"])" not in policy_mg.propositions:
+		policy_mg.propositions.append("current_time:=time.clock([time.now_ns(),\"Europe/Paris\"])")
+	if "current_time:=time.clock([time.now_ns(),\"Europe/Paris\"])" not in policy_mg.current_propositions:
+		policy_mg.current_propositions.append("current_time:=time.clock([time.now_ns(),\"Europe/Paris\"])")
+	if "to_number(current_time[0])>17" not in policy_mg.propositions:
+		policy_mg.propositions.append("to_number(current_time[0])>17")
+	if "to_number(current_time[0])>17" not in policy_mg.current_propositions:
+		policy_mg.current_propositions.append("to_number(current_time[0])>17")
+	if "http_request.path==\"/api/owner\"" not in policy_mg.propositions:
+		policy_mg.propositions.append("http_request.path==\"/api/owner\"")
+	if "http_request.path==\"/api/owner\"" not in policy_mg.current_propositions:
+		policy_mg.current_propositions.append("http_request.path==\"/api/owner\"")
+	src = "rule_9"
+	policy_mg.variables.append(src)
+	dst = rule_head
+	if dst not in policy_mg.variables:
+		policy_mg.variables.append(dst)
+	policy_mg.edges.append(Edge({src}, {dst}, attributes=policy_mg.current_propositions))
+	policy_mg.current_propositions = []
+
+	rule_head = 'allow'
+	if "user_name==\"sound\"" not in policy_mg.propositions:
+		policy_mg.propositions.append("user_name==\"sound\"")
+	if "user_name==\"sound\"" not in policy_mg.current_propositions:
+		policy_mg.current_propositions.append("user_name==\"sound\"")
+	if "http_request.method==\"POST\"" not in policy_mg.propositions:
+		policy_mg.propositions.append("http_request.method==\"POST\"")
+	if "http_request.method==\"POST\"" not in policy_mg.current_propositions:
+		policy_mg.current_propositions.append("http_request.method==\"POST\"")
+	if "current_time:=time.clock([time.now_ns(),\"Europe/Paris\"])" not in policy_mg.propositions:
+		policy_mg.propositions.append("current_time:=time.clock([time.now_ns(),\"Europe/Paris\"])")
+	if "current_time:=time.clock([time.now_ns(),\"Europe/Paris\"])" not in policy_mg.current_propositions:
+		policy_mg.current_propositions.append("current_time:=time.clock([time.now_ns(),\"Europe/Paris\"])")
+	if "to_number(current_time[0])<8" not in policy_mg.propositions:
+		policy_mg.propositions.append("to_number(current_time[0])<8")
+	if "to_number(current_time[0])<8" not in policy_mg.current_propositions:
+		policy_mg.current_propositions.append("to_number(current_time[0])<8")
+	if "http_request.path==\"/api/owner\"" not in policy_mg.propositions:
+		policy_mg.propositions.append("http_request.path==\"/api/owner\"")
+	if "http_request.path==\"/api/owner\"" not in policy_mg.current_propositions:
+		policy_mg.current_propositions.append("http_request.path==\"/api/owner\"")
+	src = "rule_10"
+	policy_mg.variables.append(src)
+	dst = rule_head
+	if dst not in policy_mg.variables:
+		policy_mg.variables.append(dst)
+	policy_mg.edges.append(Edge({src}, {dst}, attributes=policy_mg.current_propositions))
+	policy_mg.current_propositions = []
+
 	return policy_mg

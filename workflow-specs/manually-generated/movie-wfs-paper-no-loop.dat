@@ -1,3 +1,0 @@
-{owner};{vfx};(Eq(method, POST))
-{vfx};{color, sound};(Eq(method, POST)) & ((tenure > 10) | ((time > 8) & (time < 17)))
-{color};{hdr};(Eq(method, POST)) & ((time < 8) | (time > 17))
