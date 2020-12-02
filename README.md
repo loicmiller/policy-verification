@@ -1,7 +1,23 @@
 # Requirements
 
-- ANTLR python package, `antlr4-python3-runtime`, which can be installed with pip
+- ANTLR tool and python runtime
 - The python3 version of mgtoolkit, which can be found [here](https://github.com/loicmiller/mgtoolkit).
+
+# ANTLR install
+
+Install the tool:
+```bash
+curl -O http://www.antlr.org/download/antlr-4.9-complete.jar
+sudo cp antlr-4.9-complete.jar /usr/local/lib/
+export CLASSPATH=".:/usr/local/lib/antlr-4.9-complete.jar:$CLASSPATH"
+alias antlr4='java -Xmx500M -cp "/usr/local/lib/antlr-4.9-complete.jar:$CLASSPATH" org.antlr.v4.Tool'
+alias grun='java org.antlr.v4.gui.TestRig'
+```
+
+Install the python runtime:
+```bash
+pip install antlr4-python3-runtime
+```
 
 
 
