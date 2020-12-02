@@ -1,0 +1,9 @@
+owner;vfx-1;{'policy':'(Eq(method, POST))'}
+vfx-1;vfx-2;{'policy':'(Eq(method, POST))'}
+vfx-1;vfx-3;{'policy':'(Eq(method, POST))'}
+vfx-2;color;{'policy':'(Eq(method, POST)) & ((tenure > 10) | ((time >= 8) & (time <= 17)))'}
+vfx-3;sound;{'policy':'(Eq(method, POST)) & ((tenure > 10) | ((time >= 8) & (time <= 17)))'}
+color;hdr;{'policy':'(Eq(method, POST)) & ((time <= 8) | (time >= 17))'}
+hdr;owner;{'policy':'(Eq(method, POST)) & ((time >= 8) & (time <= 17))'}
+sound;owner;{'policy':'(Eq(method, POST)) & ((time <= 8) | (time >= 17))'}
+vfx-1;color;{'policy':'(Eq(method, POST)) & ((tenure > 10) | ((time >= 8) & (time <= 17)) | ((time > 10) & (tenure > 8)))'}

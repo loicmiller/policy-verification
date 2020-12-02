@@ -1,0 +1,7 @@
+*.class
+*.interp
+*.tokens
+*.java
+RegoLexer.py
+RegoParser.py
+RegoParserListener.py

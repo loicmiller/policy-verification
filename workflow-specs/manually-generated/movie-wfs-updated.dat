@@ -1,0 +1,8 @@
+{owner};{vfx-1};(Eq(method, POST))
+{vfx-1};{vfx-2};(Eq(method, POST))
+{vfx-1};{vfx-3};(Eq(method, POST))
+{vfx-2};{color};(Eq(method, POST)) & ((tenure > 10) | ((time >= 8) & (time <= 17)))
+{vfx-3};{sound};(Eq(method, POST)) & ((tenure > 10) | ((time >= 8) & (time <= 17)))
+{color};{hdr};(Eq(method, POST)) & ((time <= 8) | (time >= 17))
+{hdr};{owner};{(Eq(method, POST)) & ((time >= 8) & (time <= 17))
+{sound};{owner};{(Eq(method, POST)) & ((time <= 8) | (time >= 17))
