@@ -1,3 +1,10 @@
+# Requirements
+
+- ANTLR python package, `antlr4-python3-runtime`, which can be installed with pip
+- The python3 version of mgtoolkit, which can be found [here](https://github.com/loicmiller/mgtoolkit).
+
+
+
 # Data generation
 
 ## Files
