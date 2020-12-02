@@ -3,7 +3,7 @@
 - ANTLR tool and python runtime
 - The python3 version of mgtoolkit, which can be found [here](https://github.com/loicmiller/mgtoolkit).
 
-# ANTLR install
+## ANTLR install
 
 Install the tool:
 ```bash
@@ -19,6 +19,13 @@ Install the python runtime:
 pip install antlr4-python3-runtime
 ```
 
+## mgtoolkit install
+
+```bash
+git clone https://github.com/loicmiller/mgtoolkit.git
+cd mgtoolkit
+python setup.py install
+```
 
 
 # Data generation
