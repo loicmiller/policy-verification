@@ -7,12 +7,13 @@
 
 Install the tool:
 ```bash
-curl -O http://www.antlr.org/download/antlr-4.9-complete.jar
-sudo cp antlr-4.9-complete.jar /usr/local/lib/
-export CLASSPATH=".:/usr/local/lib/antlr-4.9-complete.jar:$CLASSPATH"
-alias antlr4='java -Xmx500M -cp "/usr/local/lib/antlr-4.9-complete.jar:$CLASSPATH" org.antlr.v4.Tool'
-alias grun='java org.antlr.v4.gui.TestRig'
+curl -O http://www.antlr.org/download/antlr-4.9.2-complete.jar
+sudo cp antlr-4.9.2-complete.jar /usr/local/lib/
+export CLASSPATH=".:/usr/local/lib/antlr-4.9.2-complete.jar:$CLASSPATH"
+alias antlr4='java -Xmx500M -cp "/usr/local/lib/antlr-4.9.2-complete.jar:$CLASSPATH" org.antlr.v4.Tool'
+alias grun='java -Xmx500M -cp "/usr/local/lib/antlr-4.9.2-complete.jar:$CLASSPATH" org.antlr.v4.gui.TestRig'
 ```
+You can add the last three lines to your startup script for convenience.
 
 Install the python runtime:
 ```bash
